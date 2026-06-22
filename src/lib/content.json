@@ -12,8 +12,8 @@
   },
   "hero": {
     "badge": "Gateway to the East",
-    "title": "Steppe",
-    "titleAccent": "Odyssey",
+    "title": "Visit",
+    "titleAccent": "Mongolia",
     "subtitle": "Venture into the land of eternal blue sky. From nomadic heritage to the spirit of the Khan, your Mongolian adventure begins here.",
     "primaryCta": "Plan Your Journey",
     "secondaryCta": "Explore Culture"
@@ -24,7 +24,7 @@
     "description": "Mongolian culture is a tapestry woven from nomadic freedom, hospitality, and a deep respect for the natural world.",
     "stats": {
       "value": "30%",
-      "label": "of the population still follow the nomadic way of life on the steppe."
+      "label": "of the population still live in traditional ways of life."
     },
     "cards": [
       {
@@ -56,21 +56,21 @@
       },
       {
         "title": "Ulaanbaatar",
-        "description": "The world's coldest capital city. A fusion of Soviet-era architecture, modern glass towers, and sprawling ger districts that house over half the nation's population.",
+        "description": "The world's coldest capital city. fusing Soviet-era architecture, modern glass towers, and sprawling ger districts.",
         "badges": ["Urban Hub", "Central Region"]
       }
     ]
   },
   "concierge": {
-    "badge": "AI PERSONAL CONCIERGE",
-    "title": "Your Custom Steppe Plan",
-    "description": "Tell us what fascinates you about Mongolia—be it nomadic culture, eagle hunting, or extreme adventure—and our AI will craft a unique journey for you.",
-    "placeholder": "e.g. I love nomadic food, horse riding, and visiting historical sites from the Mongol Empire...",
-    "buttonDefault": "Generate My Odyssey",
-    "buttonLoading": "Crafting Itinerary...",
+    "badge": "PLAN YOUR ITIENARY",
+    "title": "Your Custom Plan",
+    "description": "Tell us what fascinates you about Mongolia—be it nomadic culture, eagle hunting, or extreme adventure.",
+    "placeholder": "I want to experience nomatic food, and traditional historical sites from the Mongol Empire...",
+    "buttonDefault": "Start",
+    "buttonLoading": "Loading...",
     "resultsHeader": "Your Personalized Mongolian Odyssey",
     "highlightsHeader": "Key Highlights",
-    "travelNote": "This itinerary is powered by advanced AI based on traditional Mongolian hospitality and ecological standards."
+    "travelNote": "This itinerary is based on traditional Mongolian hospitality and ecological standards."
   },
   "food": {
     "title": "Taste of the Steppe",
@@ -86,7 +86,7 @@
       },
       {
         "name": "Tsuivan",
-        "description": "A hearty noodle and meat dish, stir-fried to perfection with mountain herbs."
+        "description": "A hearty and warm noodle and meat dish, stir-fried to perfection with mountain herbs."
       },
       {
         "name": "Airag",
@@ -113,7 +113,7 @@
         "description": "Hunting takes place in the harshest winter months, scanning the white horizon for prey with lethal precision."
       }
     ],
-    "cta": "Book the Experience"
+    "cta": "Venture further"
   },
   "survival": {
     "title": "Survival & Logistics",
@@ -133,17 +133,17 @@
       },
       {
         "title": "Navigation",
-        "description": "Off-roading is the norm. Trust local drivers and download offline maps for the vast, roadless grasslands."
+        "description": "Off-roading is the norm. Ask local drivers and download offline maps for the vast, roadless grasslands."
       }
     ]
   },
   "footer": {
     "description": "Dedicated to promoting the sustainable tourism and rich cultural heritage of the Mongolian people.",
-    "copyright": "© 2024 Steppe Odyssey. Preserving the Nomadic Soul.",
+    "copyright": "© 2026 Saxler-Lim Travel - Made by Isaac Lim",
     "sections": [
       {
         "title": "Quick Links",
-        "links": ["AI Concierge", "Cultural Heritage", "Nomadic Cuisine", "Berkutchi Experience"]
+        "links": ["PLAN", "HISTORY", "CRUSINE", "EXPERIENCE"]
       },
       {
         "title": "Discover",
@@ -153,7 +153,7 @@
     "newsletter": {
       "title": "Connect",
       "description": "Join our newsletter for exclusive travel tips and nomadic stories.",
-      "placeholder": "Email",
+      "placeholder": "your-email@example.com",
       "button": "Join"
     },
     "legal": ["Privacy Policy", "Terms of Service", "Contact Us"]

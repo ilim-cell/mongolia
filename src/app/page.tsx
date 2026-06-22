@@ -95,7 +95,7 @@ export default function Home() {
             <div className="space-y-4">
               <h4 className="font-headline font-bold text-lg">{content.footer.newsletter.title}</h4>
               <p className="text-white/60 text-sm">{content.footer.newsletter.description}</p>
-              <div className="flex gap-2">
+              <div className="flex gap-2" suppressHydrationWarning>
                 <input className="bg-white/10 border-white/20 rounded-lg px-4 py-2 text-sm w-full outline-none focus:ring-1 focus:ring-primary" placeholder={content.footer.newsletter.placeholder} />
                 <button className="bg-primary px-4 py-2 rounded-lg text-sm font-bold">{content.footer.newsletter.button}</button>
               </div>
