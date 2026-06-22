@@ -1,14 +1,10 @@
 
 import Image from "next/image"
 import { Navigation } from "@/components/Navigation"
-import { HeritageHub } from "@/components/HeritageHub"
-import { FoodMenu } from "@/components/FoodMenu"
-import { Berkutchi } from "@/components/Berkutchi"
-import { MapExplorer } from "@/components/MapExplorer"
-import { SurvivalGuide } from "@/components/SurvivalGuide"
 import { Images } from "@/lib/placeholder-images"
-import { Compass } from "lucide-react"
+import { Compass, ArrowRight } from "lucide-react"
 import { uiText } from "@/lib/ui-text"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -16,8 +12,7 @@ export default function Home() {
       <Navigation />
       
       <main className="flex-grow">
-        {/* Radical High-Contrast Hero */}
-        <section id="home" className="relative min-h-[100svh] flex items-center bg-black overflow-hidden">
+        <section className="relative min-h-[100svh] flex items-center bg-black overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src={Images.hero.url}
@@ -46,6 +41,15 @@ export default function Home() {
               <p className="text-lg md:text-2xl text-white/70 max-w-xl font-light leading-relaxed">
                 {uiText["ui.hero.subtitle"]}
               </p>
+
+              <div className="pt-12">
+                <Link href="/heritage" className="inline-flex items-center gap-4 text-white group">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.5em]">{uiText["ui.nav.links.itinerary"]}</span>
+                  <div className="h-12 w-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
           
@@ -56,15 +60,9 @@ export default function Home() {
              </span>
           </div>
         </section>
-
-        <HeritageHub />
-        <MapExplorer />
-        <FoodMenu />
-        <Berkutchi />
-        <SurvivalGuide />
       </main>
 
-      <footer className="bg-black text-white py-24 pb-32 md:pb-24 border-t border-white/5">
+      <footer className="bg-black text-white py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="space-y-6 max-w-md">
