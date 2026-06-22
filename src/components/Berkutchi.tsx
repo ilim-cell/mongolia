@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Images } from "@/lib/placeholder-images"
 import { uiText } from "@/lib/ui-text"
@@ -15,48 +14,43 @@ export function Berkutchi() {
   ]
 
   return (
-    <section id="experience" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-stretch">
-          <div className="lg:col-span-7 relative min-h-[500px] lg:min-h-[700px] rounded-[3.5rem] overflow-hidden high-contrast-shadow group">
+    <section className="section-padding bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="relative aspect-[3/4] overflow-hidden bg-slate-100 group">
             <Image
               src={Images.experience.url}
-              alt="Eagle Hunting"
+              alt="Eagle Hunter"
               fill
               unoptimized
-              className="object-cover group-hover:scale-105 transition-transform duration-[4s]"
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
               data-ai-hint={Images.experience.hint}
             />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-1000" />
           </div>
 
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-16">
-            <div className="space-y-8">
-              <div className="inline-flex items-center gap-5 text-black/30 font-bold tracking-[0.5em] uppercase text-[10px]">
-                <span className="material-symbols-rounded text-lg">flight</span>
+          <div className="space-y-16">
+            <div className="space-y-6">
+              <div className="text-black/30 font-bold tracking-[0.5em] uppercase text-[10px]">
                 {uiText["ui.berkutchi.badge"]}
               </div>
-              <h2 className="text-5xl md:text-7xl font-headline tracking-tighter leading-[0.9] text-black">{uiText["ui.berkutchi.title"]}</h2>
-              <p className="text-xl text-black/50 leading-relaxed font-light">
+              <h2 className="text-5xl md:text-8xl font-headline leading-none uppercase">{uiText["ui.berkutchi.title"]}</h2>
+              <p className="text-lg md:text-xl text-black/50 leading-relaxed font-light">
                 {uiText["ui.berkutchi.description"]}
               </p>
             </div>
 
-            <div className="space-y-6">
-              {cards.map((card, idx) => {
-                const icon = iconMap[card.title] || "verified"
-                return (
-                  <div key={idx} className="flex gap-8 items-start p-10 glass rounded-[2.5rem] hover:-translate-y-1 transition-all">
-                    <div className="h-14 w-14 flex items-center justify-center bg-black text-white rounded-2xl shrink-0">
-                      <span className="material-symbols-rounded">{icon}</span>
-                    </div>
-                    <div className="space-y-3">
-                      <h4 className="font-bold uppercase tracking-[0.3em] text-[11px]">{card.title}</h4>
-                      <p className="text-black/50 text-[13px] leading-relaxed font-light">{card.description}</p>
-                    </div>
+            <div className="grid gap-6">
+              {cards.map((card, idx) => (
+                <div key={idx} className="flex gap-8 p-10 border border-black/5 hover:border-black transition-all">
+                  <span className="material-symbols-rounded text-4xl text-black">
+                    {iconMap[card.title] || "verified"}
+                  </span>
+                  <div className="space-y-2">
+                    <h4 className="font-bold uppercase tracking-[0.2em] text-[11px]">{card.title}</h4>
+                    <p className="text-black/50 text-[13px] leading-relaxed font-light">{card.description}</p>
                   </div>
-                )
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
