@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-landscape",
+      "description": "Breathtaking view of the Mongolian steppe at sunrise",
+      "imageUrl": "https://picsum.photos/seed/mongolia-steppe/1920/1080",
+      "imageHint": "mongolia steppe"
+    },
+    {
+      "id": "nomadic-ger",
+      "description": "A traditional Mongolian ger (yurt) in the open grasslands",
+      "imageUrl": "https://picsum.photos/seed/mongolia-ger/1200/800",
+      "imageHint": "mongolia yurt"
+    },
+    {
+      "id": "eagle-hunter",
+      "description": "An eagle hunter in the Altai mountains",
+      "imageUrl": "https://picsum.photos/seed/eagle-hunter/1200/800",
+      "imageHint": "eagle hunting"
+    },
+    {
+      "id": "mongolian-buuz",
+      "description": "Traditional Mongolian meat dumplings called Buuz",
+      "imageUrl": "https://picsum.photos/seed/buuz/800/600",
+      "imageHint": "mongolian food"
+    },
+    {
+      "id": "yolyn-am",
+      "description": "The icy canyon of Yolyn Am",
+      "imageUrl": "https://picsum.photos/seed/yolyn-am/1200/800",
+      "imageHint": "mongolia canyon"
+    },
+    {
+      "id": "ulaanbaatar-city",
+      "description": "The skyline of Ulaanbaatar city",
+      "imageUrl": "https://picsum.photos/seed/ulaanbaatar/1200/800",
+      "imageHint": "ulaanbaatar city"
+    }
+  ]
 }
