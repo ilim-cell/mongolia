@@ -1,8 +1,8 @@
 
 {
-  "hero": "https://picsum.photos/seed/steppe-hero/1920/1080",
-  "heritage": "https://picsum.photos/seed/nomad-heritage/1200/1600",
-  "landmarks": "https://picsum.photos/seed/canyon-landmark/1200/1600",
-  "food": "https://picsum.photos/seed/cuisine-food/1000/1000",
-  "experience": "https://picsum.photos/seed/altai-eagle/1200/1000"
+  "hero": "https://example.com/hero.jpg",
+  "heritage": "https://example.com/heritage.jpg",
+  "landmarks": "https://example.com/landmarks.jpg",
+  "food": "https://example.com/food.jpg",
+  "experience": "https://example.com/experience.jpg"
 }

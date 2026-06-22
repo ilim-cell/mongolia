@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import { Bird, ShieldCheck, Mountain } from "lucide-react"
 import { Images } from "@/lib/placeholder-images"

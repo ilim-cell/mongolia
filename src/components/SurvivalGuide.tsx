@@ -1,3 +1,4 @@
+
 import { Sun, Snowflake, Briefcase, Map } from "lucide-react"
 import { uiText } from "@/lib/ui-text"
 
