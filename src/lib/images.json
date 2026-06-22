@@ -1,8 +1,8 @@
 
 {
-  "hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsqUHGtlpOs_kB2g4uNCve5seRqG9lSOWX-933juCjQw&s=10",
-  "heritage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsqUHGtlpOs_kB2g4uNCve5seRqG9lSOWX-933juCjQw&s=10",
-  "landmarks": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsqUHGtlpOs_kB2g4uNCve5seRqG9lSOWX-933juCjQw&s=10",
-  "food": "https://www.spendwithpennies.com/wp-content/uploads/2023/06/1200-Easy-Mongolian-Beef-2-SpendWithPennies.jpg",
-  "experience": "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=2070&auto=format&fit=crop"
+  "hero": "https://picsum.photos/seed/steppe-hero/1920/1080",
+  "heritage": "https://picsum.photos/seed/nomad-heritage/1200/1600",
+  "landmarks": "https://picsum.photos/seed/canyon-landmark/1200/1600",
+  "food": "https://picsum.photos/seed/cuisine-food/1000/1000",
+  "experience": "https://picsum.photos/seed/altai-eagle/1200/1000"
 }
