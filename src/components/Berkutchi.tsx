@@ -17,50 +17,48 @@ export function Berkutchi() {
   ]
 
   return (
-    <section id="experience" className="py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="bg-slate-950 text-white flex flex-col lg:flex-row shadow-2xl overflow-hidden">
-          <div className="w-full lg:w-1/2 relative h-[500px] lg:h-auto">
-            {eagleImg && (
-              <Image
-                src={eagleImg.imageUrl}
-                alt={eagleImg.description}
-                fill
-                className="object-cover opacity-80"
-                data-ai-hint={eagleImg.imageHint}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent" />
-          </div>
-
-          <div className="w-full lg:w-1/2 p-12 lg:p-24 space-y-12">
+    <section id="experience" className="py-32 bg-foreground text-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-20">
+          <div className="w-full lg:w-1/2 space-y-12">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-3 text-primary font-bold tracking-[0.3em] uppercase text-[10px]">
+              <div className="inline-flex items-center gap-4 text-primary font-bold tracking-[0.4em] uppercase text-[9px]">
                 <Bird className="h-4 w-4" />
                 {uiText["ui.berkutchi.badge"]}
               </div>
               <h2 className="text-5xl md:text-6xl font-headline leading-tight">{uiText["ui.berkutchi.title"]}</h2>
-              <p className="text-white/50 text-lg leading-relaxed font-light">
+              <p className="text-white/40 text-lg leading-relaxed font-light">
                 {uiText["ui.berkutchi.description"]}
               </p>
             </div>
 
-            <div className="space-y-10">
+            <div className="grid gap-12">
               {cards.map((card, idx) => {
                 const Icon = iconMap[card.title] || ShieldCheck
                 return (
-                  <div key={idx} className="flex gap-6 items-start">
-                    <div className="shrink-0 h-12 w-12 border border-white/10 flex items-center justify-center text-primary">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-bold uppercase tracking-widest text-sm">{card.title}</h4>
-                      <p className="text-white/40 text-xs leading-relaxed font-light">{card.description}</p>
+                  <div key={idx} className="flex gap-6 items-start max-w-md">
+                    <div className="shrink-0 h-px w-12 bg-primary mt-3" />
+                    <div className="space-y-3">
+                      <h4 className="font-bold uppercase tracking-widest text-[11px] text-white">{card.title}</h4>
+                      <p className="text-white/30 text-sm leading-relaxed font-light">{card.description}</p>
                     </div>
                   </div>
                 )
               })}
             </div>
+          </div>
+
+          <div className="w-full lg:w-1/2 relative min-h-[500px] border-[20px] border-white/5">
+            {eagleImg && (
+              <Image
+                src={eagleImg.imageUrl}
+                alt={eagleImg.description}
+                fill
+                unoptimized
+                className="object-cover opacity-80"
+                data-ai-hint={eagleImg.imageHint}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 43 33% 94%;
-    --foreground: 20 10% 10%;
-    --card: 43 33% 98%;
-    --card-foreground: 20 10% 10%;
-    --popover: 43 33% 94%;
-    --popover-foreground: 20 10% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
     --primary: 42 70% 35%;
-    --primary-foreground: 43 33% 98%;
-    --secondary: 9 60% 40%;
-    --secondary-foreground: 43 33% 98%;
-    --muted: 42 20% 85%;
-    --muted-foreground: 20 10% 35%;
-    --accent: 9 60% 40%;
-    --accent-foreground: 43 33% 98%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 42 30% 80%;
-    --input: 42 30% 80%;
-    --ring: 42 70% 35%;
-    --radius: 0.1rem; /* Sharp, professional edges */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 10%;
+    --radius: 0rem;
   }
 }
 
@@ -32,38 +32,30 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tight text-slate-900;
+    @apply font-headline tracking-tight text-foreground;
   }
 }
 
-.asymmetric-grid {
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.9) 100%);
+}
+
+.editorial-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.fade-in-sunrise {
-  animation: sunriseFade 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes sunriseFade {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-    filter: brightness(0.7);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: brightness(1);
-  }
-}
-
-/* Custom selection color */
-::selection {
-  @apply bg-primary/20 text-slate-900;
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
