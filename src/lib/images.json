@@ -1,9 +1,19 @@
 
 {
-  "hero": "https://example.com/hero.jpg",
-  "heritage": "https://example.com/heritage.jpg",
-  "landmarks": "https://example.com/landmarks.jpg",
-  "food": "https://example.com/food.jpg",
-  "experience": "https://example.com/experience.jpg",
-  "survival": "https://example.com/survival.jpg"
+  "hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVeWHYWQEPi8GDt8aP5Hxlx8G-1gA0dc4DCYlBltZzv_4JfE9I2cXySqs&s=10",
+  "heritage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckhay6YzrbLoltUn3VKqzxY61Uroe2D7pPfej2frgRg&s=10",
+  "landmarks": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckhay6YzrbLoltUn3VKqzxY61Uroe2D7pPfej2frgRg&s=10",
+  "food": "https://www.spendwithpennies.com/wp-content/uploads/2023/06/1200-Easy-Mongolian-Beef-2-SpendWithPennies.jpg",
+  "experience": "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=2070&auto=format&fit=crop",
+  "survival": "https://i.natgeofe.com/n/16e74383-9dbf-4425-860b-7965a3d70844/Mongolia_summer_Landscape.jpg",
+  "hero_primary_landscape": "https://example.com/hero_primary_landscape.jpg",
+  "heritage_nomadic_life_ger": "https://example.com/heritage_nomadic_life_ger.jpg",
+  "landmarks_vulture_valley_ice": "https://example.com/landmarks_vulture_valley_ice.jpg",
+  "food_traditional_buuz_steamed": "https://example.com/food_traditional_buuz_steamed.jpg",
+  "experience_eagle_hunter_mountain": "https://example.com/experience_eagle_hunter_mountain.jpg",
+  "survival_wilderness_gear_pack": "https://example.com/survival_wilderness_gear_pack.jpg",
+  "gallery_steppes_sunset": "https://example.com/gallery_steppes_sunset.jpg",
+  "gallery_horse_riding_culture": "https://example.com/gallery_horse_riding_culture.jpg",
+  "gallery_ulaanbaatar_modern_skyline": "https://example.com/gallery_ulaanbaatar_modern_skyline.jpg",
+  "footer_branding_logo_background": "https://example.com/footer_branding_logo_background.jpg"
 }
