@@ -1,30 +1,29 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 43 33% 96%; /* Sandstone White #F8F6F1 */
-    --foreground: 20 10% 15%;
+    --background: 43 33% 94%; /* Slightly darker for better contrast #F2EFE9 */
+    --foreground: 20 10% 10%;
     --card: 43 33% 98%;
-    --card-foreground: 20 10% 15%;
-    --popover: 43 33% 96%;
-    --popover-foreground: 20 10% 15%;
-    --primary: 42 70% 45%; /* Ochre Gold #C39322 */
+    --card-foreground: 20 10% 10%;
+    --popover: 43 33% 94%;
+    --popover-foreground: 20 10% 10%;
+    --primary: 42 70% 35%; /* Darker Ochre for better legibility */
     --primary-foreground: 43 33% 98%;
-    --secondary: 9 60% 50%; /* Terracotta #CC4B33 */
+    --secondary: 9 60% 40%; /* Darker Terracotta */
     --secondary-foreground: 43 33% 98%;
-    --muted: 42 20% 90%;
-    --muted-foreground: 20 10% 40%;
-    --accent: 9 60% 50%;
+    --muted: 42 20% 85%;
+    --muted-foreground: 20 10% 35%;
+    --accent: 9 60% 40%;
     --accent-foreground: 43 33% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 42 30% 85%;
-    --input: 42 30% 85%;
-    --ring: 42 70% 45%;
-    --radius: 0.75rem;
+    --border: 42 30% 80%;
+    --input: 42 30% 80%;
+    --ring: 42 70% 35%;
+    --radius: 0.5rem;
   }
 }
 
@@ -34,9 +33,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline;
+    @apply font-headline tracking-tight text-slate-900;
   }
 }
 
@@ -47,14 +47,14 @@
 }
 
 .fade-in-sunrise {
-  animation: sunriseFade 2s ease-out forwards;
+  animation: sunriseFade 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes sunriseFade {
   from {
     opacity: 0;
-    transform: translateY(10px);
-    filter: brightness(0.8);
+    transform: translateY(20px);
+    filter: brightness(0.7);
   }
   to {
     opacity: 1;
