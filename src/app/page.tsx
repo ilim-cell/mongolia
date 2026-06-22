@@ -17,7 +17,7 @@ export default function Home() {
       
       <main className="flex-grow">
         {/* Radical High-Contrast Hero */}
-        <section className="relative min-h-[100svh] flex items-center bg-black overflow-hidden">
+        <section id="home" className="relative min-h-[100svh] flex items-center bg-black overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src={Images.hero.url}

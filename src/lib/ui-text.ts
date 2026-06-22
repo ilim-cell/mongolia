@@ -1,9 +1,11 @@
+
 /**
  * @fileOverview Flat configuration for all UI text following an environment-style structure.
  */
 export const uiText = {
   // NAVIGATION
   "ui.nav.logo": "Explore Mongolia",
+  "ui.nav.links.home": "Home",
   "ui.nav.links.itinerary": "Itinerary",
   "ui.nav.links.heritage": "Heritage",
   "ui.nav.links.food": "Food",
@@ -43,17 +45,6 @@ export const uiText = {
   "ui.mapExplorer.landmark2.description": "The world's coldest capital city, functioning as the primary administrative and cultural hub.",
   "ui.mapExplorer.landmark2.badge1": "Urban Hub",
   "ui.mapExplorer.landmark2.badge2": "Central Region",
-
-  // CONCIERGE (AI)
-  "ui.concierge.badge": "Heritage Discovery",
-  "ui.concierge.title": "Traveler's Curiosity",
-  "ui.concierge.description": "Describe your areas of interest to reveal a tailored perspective on Mongolia's heritage and landscapes.",
-  "ui.concierge.placeholder": "Example: I am interested in nomadic music and the history of the Silk Road...",
-  "ui.concierge.buttonDefault": "Start",
-  "ui.concierge.buttonLoading": "Loading...",
-  "ui.concierge.resultsHeader": "Tailored Exploration Guide",
-  "ui.concierge.highlightsHeader": "Key Experiences",
-  "ui.concierge.travelNote": "This data is provided for educational and cultural discovery purposes. Do not rely on this information solely.",
 
   // FOOD MENU
   "ui.food.title": "Taste of the Steppe",
