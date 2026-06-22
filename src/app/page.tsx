@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Navigation } from "@/components/Navigation"
 import { HeritageHub } from "@/components/HeritageHub"
@@ -23,7 +22,7 @@ export default function Home() {
               src={Images.hero.url}
               alt="Mongolian Steppe"
               fill
-              className="object-cover opacity-80"
+              className="object-cover opacity-80 animate-in fade-in zoom-in-105 duration-1000"
               priority
               unoptimized
               data-ai-hint={Images.hero.hint}
@@ -32,7 +31,7 @@ export default function Home() {
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-            <div className="max-w-3xl space-y-6">
+            <div className="max-w-3xl space-y-6 animate-in slide-in-from-left-8 duration-1000">
               <div className="inline-block px-4 py-1 border border-white/20 bg-white/5 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-[0.3em] rounded-full">
                 {uiText["ui.hero.badge"]}
               </div>
@@ -48,9 +47,9 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="absolute bottom-12 left-12 flex items-center gap-6">
-             <div className="h-px w-20 bg-white/20" />
-             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
+          <div className="absolute bottom-12 left-6 lg:left-12 flex items-center gap-6 opacity-40 animate-pulse">
+             <div className="h-px w-12 md:w-20 bg-white" />
+             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white">
                {uiText["ui.hero.scroll"]}
              </span>
           </div>

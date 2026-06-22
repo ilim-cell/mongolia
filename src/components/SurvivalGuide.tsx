@@ -1,4 +1,3 @@
-
 import { Sun, Snowflake, Briefcase, Map } from "lucide-react"
 import { uiText } from "@/lib/ui-text"
 
@@ -20,17 +19,17 @@ export function SurvivalGuide() {
   return (
     <section id="guide" className="section-padding bg-white border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="mb-20 text-center space-y-4 max-w-2xl mx-auto">
+        <div className="mb-16 lg:mb-20 text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-headline tracking-tighter">{uiText["ui.survival.title"]}</h2>
-          <p className="text-muted-foreground font-light text-lg">{uiText["ui.survival.description"]}</p>
+          <p className="text-muted-foreground font-light text-lg leading-relaxed">{uiText["ui.survival.description"]}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {guides.map((guide, i) => {
             const Icon = iconMap[guide.title] || Map
             return (
-              <div key={i} className="p-8 border border-border rounded-2xl hover:bg-secondary transition-all hover:-translate-y-1">
-                <div className="h-12 w-12 flex items-center justify-center mb-6 bg-foreground text-white rounded-xl">
+              <div key={i} className="p-8 border border-border rounded-2xl hover:bg-secondary transition-all hover:-translate-y-2 group">
+                <div className="h-12 w-12 flex items-center justify-center mb-6 bg-foreground text-white rounded-xl group-hover:scale-110 transition-transform">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-bold text-sm uppercase tracking-widest mb-3">{guide.title}</h3>

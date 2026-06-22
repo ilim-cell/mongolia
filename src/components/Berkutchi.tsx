@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Bird, ShieldCheck, Mountain } from "lucide-react"
 import { Images } from "@/lib/placeholder-images"
@@ -18,17 +17,17 @@ export function Berkutchi() {
   return (
     <section id="experience" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-20 items-stretch">
-          <div className="lg:col-span-7 relative min-h-[500px] rounded-3xl overflow-hidden high-contrast-shadow">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-stretch">
+          <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-3xl overflow-hidden high-contrast-shadow group">
             <Image
               src={Images.experience.url}
               alt="Eagle Hunting"
               fill
               unoptimized
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-[2000ms]"
               data-ai-hint={Images.experience.hint}
             />
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700" />
           </div>
 
           <div className="lg:col-span-5 flex flex-col justify-center space-y-12">
@@ -37,17 +36,17 @@ export function Berkutchi() {
                 <Bird className="h-4 w-4" />
                 {uiText["ui.berkutchi.badge"]}
               </div>
-              <h2 className="text-5xl md:text-6xl font-headline tracking-tighter leading-tight">{uiText["ui.berkutchi.title"]}</h2>
+              <h2 className="text-4xl md:text-6xl font-headline tracking-tighter leading-tight">{uiText["ui.berkutchi.title"]}</h2>
               <p className="text-lg text-muted-foreground leading-relaxed font-light">
                 {uiText["ui.berkutchi.description"]}
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8">
               {cards.map((card, idx) => {
                 const Icon = iconMap[card.title] || ShieldCheck
                 return (
-                  <div key={idx} className="flex gap-6 items-start max-w-md p-6 border border-border rounded-2xl hover:bg-secondary transition-colors">
+                  <div key={idx} className="flex gap-6 items-start max-w-md p-6 border border-border rounded-2xl hover:bg-secondary transition-all hover:translate-x-1">
                     <div className="h-10 w-10 flex items-center justify-center bg-foreground text-white rounded-xl shrink-0">
                       <Icon className="h-5 w-5" />
                     </div>
