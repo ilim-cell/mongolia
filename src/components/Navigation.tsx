@@ -35,7 +35,7 @@ export function Navigation() {
     { name: uiText["ui.nav.links.home"] || "Home", href: "#home", id: "home", icon: "home" },
     { name: uiText["ui.nav.links.heritage"], href: "#heritage", id: "heritage", icon: "museum" },
     { name: uiText["ui.nav.links.food"], href: "#food", id: "food", icon: "restaurant" },
-    { name: uiText["ui.nav.links.experience"], href: "#experience", id: "experience", icon: "bird" },
+    { name: uiText["ui.nav.links.experience"], href: "#experience", id: "experience", icon: "flight" },
     { name: uiText["ui.nav.links.guide"], href: "#guide", id: "guide", icon: "map" },
   ]
 

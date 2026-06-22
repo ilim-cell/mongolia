@@ -33,7 +33,7 @@ export function Berkutchi() {
           <div className="lg:col-span-5 flex flex-col justify-center space-y-16">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-5 text-black/30 font-bold tracking-[0.5em] uppercase text-[10px]">
-                <span className="material-symbols-rounded text-lg">bird</span>
+                <span className="material-symbols-rounded text-lg">flight</span>
                 {uiText["ui.berkutchi.badge"]}
               </div>
               <h2 className="text-5xl md:text-7xl font-headline tracking-tighter leading-[0.9] text-black">{uiText["ui.berkutchi.title"]}</h2>
