@@ -67,7 +67,7 @@ export const uiText = {
   "ui.food.item4.name": "Airag",
   "ui.food.item4.description": "Fermented mare's milk, representing a significant national delicacy.",
   "ui.food.featured.badge": "Signature Dish",
-  "ui.food.featured.title": "Handmade Buuz",
+  "ui.food.featured.title": "Mongolian Beef",
   "ui.food.featured.description": "Traditionally prepared with mutton to sustain life during severe winters.",
 
   // BERKUTCHI

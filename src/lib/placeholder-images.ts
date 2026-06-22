@@ -21,5 +21,9 @@ export const Images = {
   experience: {
     url: imageLinks.experience,
     hint: "mongolian eagle hunter mountains snow"
+  },
+  survival: {
+    url: imageLinks.survival,
+    hint: "mongolia wilderness survival gear"
   }
 };
