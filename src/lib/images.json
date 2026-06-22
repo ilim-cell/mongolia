@@ -1,11 +1,11 @@
 
 {
-  "hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVeWHYWQEPi8GDt8aP5Hxlx8G-1gA0dc4DCYlBltZzv_4JfE9I2cXySqs&s=10",
-  "heritage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckhay6YzrbLoltUn3VKqzxY61Uroe2D7pPfej2frgRg&s=10",
-  "landmarks": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckhay6YzrbLoltUn3VKqzxY61Uroe2D7pPfej2frgRg&s=10",
-  "food": "https://www.spendwithpennies.com/wp-content/uploads/2023/06/1200-Easy-Mongolian-Beef-2-SpendWithPennies.jpg",
+  "hero": "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=2070&auto=format&fit=crop",
+  "heritage": "https://images.unsplash.com/photo-1543326168-54cc5f0285a8?q=80&w=1974&auto=format&fit=crop",
+  "landmarks": "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070&auto=format&fit=crop",
+  "food": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=2080&auto=format&fit=crop",
   "experience": "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=2070&auto=format&fit=crop",
-  "survival": "https://i.natgeofe.com/n/16e74383-9dbf-4425-860b-7965a3d70844/Mongolia_summer_Landscape.jpg",
+  "survival": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop",
   "hero_primary_landscape": "https://example.com/hero_primary_landscape.jpg",
   "heritage_nomadic_life_ger": "https://example.com/heritage_nomadic_life_ger.jpg",
   "landmarks_vulture_valley_ice": "https://example.com/landmarks_vulture_valley_ice.jpg",
@@ -15,5 +15,10 @@
   "gallery_steppes_sunset": "https://example.com/gallery_steppes_sunset.jpg",
   "gallery_horse_riding_culture": "https://example.com/gallery_horse_riding_culture.jpg",
   "gallery_ulaanbaatar_modern_skyline": "https://example.com/gallery_ulaanbaatar_modern_skyline.jpg",
-  "footer_branding_logo_background": "https://example.com/footer_branding_logo_background.jpg"
+  "footer_branding_logo_background": "https://example.com/footer_branding_logo_background.jpg",
+  "map_topographic_central": "https://example.com/map_topographic_central.jpg",
+  "culinary_prep_detail": "https://example.com/culinary_prep_detail.jpg",
+  "altai_winter_peaks": "https://example.com/altai_winter_peaks.jpg",
+  "survival_first_aid_kit": "https://example.com/survival_first_aid_kit.jpg",
+  "hospitality_ritual_tea": "https://example.com/hospitality_ritual_tea.jpg"
 }

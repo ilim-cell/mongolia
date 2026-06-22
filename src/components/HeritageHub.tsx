@@ -1,14 +1,13 @@
 
 import Image from "next/image"
-import { Heart, Users, Home, ShieldCheck } from "lucide-react"
 import { Images } from "@/lib/placeholder-images"
 import { uiText } from "@/lib/ui-text"
 
-const iconMap: Record<string, any> = {
-  "Radical Hospitality": Heart,
-  "The Ger Lifestyle": Home,
-  "Legacy of Empire": Users,
-  "Modern Harmony": ShieldCheck
+const iconMap: Record<string, string> = {
+  "Radical Hospitality": "favorite",
+  "The Ger Lifestyle": "home",
+  "Legacy of Empire": "groups",
+  "Modern Harmony": "verified"
 }
 
 export function HeritageHub() {
@@ -22,29 +21,29 @@ export function HeritageHub() {
   return (
     <section id="heritage" className="section-padding bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           <div className="space-y-12 order-2 lg:order-1">
-            <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-headline text-foreground leading-[1] tracking-tighter">
+            <div className="space-y-8">
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-headline text-black leading-[0.9] tracking-tighter">
                 {uiText["ui.heritage.title"]} <br/>
-                <span className="text-muted-foreground/30 italic">{uiText["ui.heritage.titleAccent"]}</span>
+                <span className="text-black/20 italic">{uiText["ui.heritage.titleAccent"]}</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed font-light">
+              <p className="text-xl text-black/60 max-w-lg leading-relaxed font-light">
                 {uiText["ui.heritage.description"]}
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-6">
               {cards.map((card, idx) => {
-                const Icon = iconMap[card.title] || ShieldCheck
+                const icon = iconMap[card.title] || "verified"
                 return (
-                  <div key={idx} className="space-y-4 p-6 border border-border rounded-2xl hover:bg-secondary transition-all hover:-translate-y-1 group">
-                    <div className="h-10 w-10 flex items-center justify-center bg-black text-white rounded-xl group-hover:scale-110 transition-transform">
-                      <Icon className="h-5 w-5" />
+                  <div key={idx} className="glass p-8 rounded-[2rem] hover:scale-[1.02] transition-all group">
+                    <div className="h-12 w-12 flex items-center justify-center bg-black text-white rounded-2xl mb-6 group-hover:bg-black/80">
+                      <span className="material-symbols-rounded">{icon}</span>
                     </div>
-                    <div className="space-y-2">
-                      <h3 className="text-[11px] font-bold uppercase tracking-[0.2em]">{card.title}</h3>
-                      <p className="text-[11px] text-muted-foreground leading-relaxed">
+                    <div className="space-y-3">
+                      <h3 className="text-xs font-bold uppercase tracking-[0.25em]">{card.title}</h3>
+                      <p className="text-[12px] text-black/50 leading-relaxed font-light">
                         {card.description}
                       </p>
                     </div>
@@ -54,18 +53,18 @@ export function HeritageHub() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-3xl high-contrast-shadow order-1 lg:order-2">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] high-contrast-shadow order-1 lg:order-2 group">
             <Image
               src={Images.heritage.url}
               alt="Nomadic Lifestyle"
               fill
               unoptimized
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-[3s]"
               data-ai-hint={Images.heritage.hint}
             />
-            <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 p-6 sm:p-10 bg-black/90 backdrop-blur-xl text-white rounded-2xl">
-              <p className="font-headline font-bold text-4xl sm:text-6xl mb-2">{uiText["ui.heritage.stats.value"]}</p>
-              <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 leading-relaxed">
+            <div className="absolute inset-x-6 bottom-6 p-10 glass-dark text-white rounded-[2.5rem]">
+              <p className="font-headline font-extrabold text-6xl md:text-8xl mb-2">{uiText["ui.heritage.stats.value"]}</p>
+              <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40 leading-relaxed">
                 {uiText["ui.heritage.stats.label"]}
               </p>
             </div>

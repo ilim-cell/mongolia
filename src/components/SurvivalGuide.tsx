@@ -1,12 +1,11 @@
 
-import { Sun, Snowflake, Briefcase, Map } from "lucide-react"
 import { uiText } from "@/lib/ui-text"
 
-const iconMap: Record<string, any> = {
-  "Climate Control": Snowflake,
-  "Essential Gear": Briefcase,
-  "Cultural Etiquette": Map,
-  "Navigation": Sun
+const iconMap: Record<string, string> = {
+  "Climate Control": "thermostat",
+  "Essential Gear": "backpack",
+  "Cultural Etiquette": "temple_buddhist",
+  "Navigation": "explore"
 }
 
 export function SurvivalGuide() {
@@ -18,23 +17,23 @@ export function SurvivalGuide() {
   ]
 
   return (
-    <section id="guide" className="section-padding bg-white border-t border-border">
+    <section id="guide" className="section-padding bg-white border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="mb-16 lg:mb-20 text-center space-y-4 max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-headline tracking-tighter">{uiText["ui.survival.title"]}</h2>
-          <p className="text-muted-foreground font-light text-lg leading-relaxed">{uiText["ui.survival.description"]}</p>
+        <div className="mb-20 text-center space-y-6 max-w-3xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-headline tracking-tighter text-black">{uiText["ui.survival.title"]}</h2>
+          <p className="text-black/50 font-light text-xl leading-relaxed">{uiText["ui.survival.description"]}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {guides.map((guide, i) => {
-            const Icon = iconMap[guide.title] || Map
+            const icon = iconMap[guide.title] || "map"
             return (
-              <div key={i} className="p-8 border border-border rounded-2xl hover:bg-secondary transition-all hover:-translate-y-2 group">
-                <div className="h-12 w-12 flex items-center justify-center mb-6 bg-foreground text-white rounded-xl group-hover:scale-110 transition-transform">
-                  <Icon className="h-6 w-6" />
+              <div key={i} className="p-10 glass rounded-[3rem] hover:bg-black hover:text-white transition-all duration-500 group">
+                <div className="h-16 w-16 flex items-center justify-center mb-10 bg-black text-white rounded-2xl group-hover:bg-white group-hover:text-black transition-all">
+                  <span className="material-symbols-rounded text-3xl">{icon}</span>
                 </div>
-                <h3 className="font-bold text-sm uppercase tracking-widest mb-3">{guide.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <h3 className="font-bold text-[11px] uppercase tracking-[0.4em] mb-4">{guide.title}</h3>
+                <p className="text-[13px] text-black/50 group-hover:text-white/60 leading-relaxed font-light">
                   {guide.description}
                 </p>
               </div>

@@ -36,5 +36,12 @@ export const Images = {
     sunset: imageLinks.gallery_steppes_sunset,
     horse: imageLinks.gallery_horse_riding_culture,
     city: imageLinks.gallery_ulaanbaatar_modern_skyline
+  },
+  extra: {
+    map: imageLinks.map_topographic_central,
+    prep: imageLinks.culinary_prep_detail,
+    peaks: imageLinks.altai_winter_peaks,
+    kit: imageLinks.survival_first_aid_kit,
+    tea: imageLinks.hospitality_ritual_tea
   }
 };
