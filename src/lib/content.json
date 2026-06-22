@@ -1,0 +1,161 @@
+{
+  "navigation": {
+    "logo": "Steppe Odyssey",
+    "links": [
+      { "name": "Itinerary", "href": "#itinerary" },
+      { "name": "Heritage", "href": "#heritage" },
+      { "name": "Food", "href": "#food" },
+      { "name": "Experience", "href": "#experience" },
+      { "name": "Guide", "href": "#guide" }
+    ],
+    "cta": "Start Your Journey"
+  },
+  "hero": {
+    "badge": "Gateway to the East",
+    "title": "Steppe",
+    "titleAccent": "Odyssey",
+    "subtitle": "Venture into the land of eternal blue sky. From nomadic heritage to the spirit of the Khan, your Mongolian adventure begins here.",
+    "primaryCta": "Plan Your Journey",
+    "secondaryCta": "Explore Culture"
+  },
+  "heritage": {
+    "title": "The Soul of the",
+    "titleAccent": "Steppe",
+    "description": "Mongolian culture is a tapestry woven from nomadic freedom, hospitality, and a deep respect for the natural world.",
+    "stats": {
+      "value": "30%",
+      "label": "of the population still follow the nomadic way of life on the steppe."
+    },
+    "cards": [
+      {
+        "title": "Radical Hospitality",
+        "description": "In the vast steppe, hospitality is enactional, not transactional. Every visitor to a rural ail (encampment) is welcomed as a public norm."
+      },
+      {
+        "title": "The Ger Lifestyle",
+        "description": "About 30% of Mongolians still live in traditional gers (yurts). These portable dwellings offer resilience against extreme climates."
+      },
+      {
+        "title": "Legacy of Empire",
+        "description": "Founded by Genghis Khan in the 1200s, the Mongol Empire's influence on Eurasian history remains a point of deep pride."
+      },
+      {
+        "title": "Modern Harmony",
+        "description": "Ulaanbaatar blends modern urban life with ancient traditions, creating a unique democratic cultural identity."
+      }
+    ]
+  },
+  "mapExplorer": {
+    "title": "Steppe Landmarks",
+    "description": "From the frozen valleys to the modern sprawl.",
+    "landmarks": [
+      {
+        "title": "Yolyn Am (Valley of Vultures)",
+        "description": "A narrow canyon in the Gobi where ice sheets stay frozen deep into summer. Steep cliffs block sunlight, creating a hidden pocket of cold amidst the desert heat.",
+        "badges": ["Permanent Ice", "Gobi Gurvansaikhan"]
+      },
+      {
+        "title": "Ulaanbaatar",
+        "description": "The world's coldest capital city. A fusion of Soviet-era architecture, modern glass towers, and sprawling ger districts that house over half the nation's population.",
+        "badges": ["Urban Hub", "Central Region"]
+      }
+    ]
+  },
+  "concierge": {
+    "badge": "AI PERSONAL CONCIERGE",
+    "title": "Your Custom Steppe Plan",
+    "description": "Tell us what fascinates you about Mongolia—be it nomadic culture, eagle hunting, or extreme adventure—and our AI will craft a unique journey for you.",
+    "placeholder": "e.g. I love nomadic food, horse riding, and visiting historical sites from the Mongol Empire...",
+    "buttonDefault": "Generate My Odyssey",
+    "buttonLoading": "Crafting Itinerary...",
+    "resultsHeader": "Your Personalized Mongolian Odyssey",
+    "highlightsHeader": "Key Highlights",
+    "travelNote": "This itinerary is powered by advanced AI based on traditional Mongolian hospitality and ecological standards."
+  },
+  "food": {
+    "title": "Taste of the Steppe",
+    "description": "\"Meat for the winter, dairy for the summer.\" Discover a culinary tradition built on nourishment and resilience.",
+    "items": [
+      {
+        "name": "Buuz",
+        "description": "Steamed meat dumplings, juicy and filling, a staple of every celebration."
+      },
+      {
+        "name": "Khuushuur",
+        "description": "Deep-fried meat pastries that provide essential energy for the nomadic life."
+      },
+      {
+        "name": "Tsuivan",
+        "description": "A hearty noodle and meat dish, stir-fried to perfection with mountain herbs."
+      },
+      {
+        "name": "Airag",
+        "description": "Fermented mare's milk, a national delicacy and a symbol of summer."
+      }
+    ],
+    "featured": {
+      "badge": "Signature Dish",
+      "title": "Handmade Buuz",
+      "description": "Traditionally prepared with high-fat mutton to sustain during cold winters."
+    }
+  },
+  "berkutchi": {
+    "badge": "Altai Mountains",
+    "title": "The Berkutchi Legend",
+    "description": "In the snow-capped Altai, eagle hunting is not just a sport—it's a spiritual bond between man and bird, surviving for millennia.",
+    "cards": [
+      {
+        "title": "The Sacred Bond",
+        "description": "Eagles are considered revered family members, released back into the wild after years of loyal service."
+      },
+      {
+        "title": "Winter Survival",
+        "description": "Hunting takes place in the harshest winter months, scanning the white horizon for prey with lethal precision."
+      }
+    ],
+    "cta": "Book the Experience"
+  },
+  "survival": {
+    "title": "Survival & Logistics",
+    "description": "Expert advice for navigating the extreme Mongolian wilderness.",
+    "guides": [
+      {
+        "title": "Climate Control",
+        "description": "Prepare for extreme temperature swings. Freezing winters (dzud) and scorching summers require technical layering."
+      },
+      {
+        "title": "Essential Gear",
+        "description": "Pack high-quality wool, sturdy riding boots, and sun protection. Solar power is vital for staying connected on the steppe."
+      },
+      {
+        "title": "Cultural Etiquette",
+        "description": "Learn the rituals of the ger: enter with your right foot first, and never step on the threshold."
+      },
+      {
+        "title": "Navigation",
+        "description": "Off-roading is the norm. Trust local drivers and download offline maps for the vast, roadless grasslands."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Dedicated to promoting the sustainable tourism and rich cultural heritage of the Mongolian people.",
+    "copyright": "© 2024 Steppe Odyssey. Preserving the Nomadic Soul.",
+    "sections": [
+      {
+        "title": "Quick Links",
+        "links": ["AI Concierge", "Cultural Heritage", "Nomadic Cuisine", "Berkutchi Experience"]
+      },
+      {
+        "title": "Discover",
+        "links": ["Gobi Desert", "Altai Mountains", "Lake Khuvsgul", "Ulaanbaatar"]
+      }
+    ],
+    "newsletter": {
+      "title": "Connect",
+      "description": "Join our newsletter for exclusive travel tips and nomadic stories.",
+      "placeholder": "Email",
+      "button": "Join"
+    },
+    "legal": ["Privacy Policy", "Terms of Service", "Contact Us"]
+  }
+}

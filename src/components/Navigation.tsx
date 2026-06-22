@@ -1,22 +1,13 @@
-
 "use client"
 
 import * as React from "react"
 import Link from "next/link"
 import { Compass, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import content from "@/lib/content.json"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
-
-  const navLinks = [
-    { name: "Itinerary", href: "#itinerary" },
-    { name: "Heritage", href: "#heritage" },
-    { name: "Food", href: "#food" },
-    { name: "Experience", href: "#experience" },
-    { name: "Guide", href: "#guide" },
-  ]
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -24,11 +15,11 @@ export function Navigation() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
             <Compass className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-headline font-bold text-primary tracking-tight">Steppe Odyssey</span>
+            <span className="text-2xl font-headline font-bold text-primary tracking-tight">{content.navigation.logo}</span>
           </div>
 
           <div className="hidden md:flex space-x-8 items-center">
-            {navLinks.map((link) => (
+            {content.navigation.links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -38,7 +29,7 @@ export function Navigation() {
               </Link>
             ))}
             <Button variant="default" className="bg-primary hover:bg-primary/90">
-              Start Your Journey
+              {content.navigation.cta}
             </Button>
           </div>
 
@@ -53,7 +44,7 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-background border-b border-border animate-in slide-in-from-top duration-300">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
+            {content.navigation.links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -65,7 +56,7 @@ export function Navigation() {
             ))}
             <div className="px-3 pt-4">
               <Button variant="default" className="w-full bg-primary">
-                Start Your Journey
+                {content.navigation.cta}
               </Button>
             </div>
           </div>

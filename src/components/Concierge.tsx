@@ -1,13 +1,13 @@
-
 "use client"
 
 import * as React from "react"
-import { Sparkles, Loader2, MapPin, ListChecks, Info } from "lucide-react"
+import { Sparkles, Loader2, ListChecks, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { personalizedMongoliaItineraryGenerator, type PersonalizedMongoliaItineraryOutput } from "@/ai/flows/personalized-mongolia-itinerary-generator"
+import content from "@/lib/content.json"
 
 export function Concierge() {
   const [interests, setInterests] = React.useState("")
@@ -32,11 +32,11 @@ export function Concierge() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20" variant="outline">
-            AI PERSONAL CONCIERGE
+            {content.concierge.badge}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-headline mb-4">Your Custom Steppe Plan</h2>
+          <h2 className="text-4xl md:text-5xl font-headline mb-4">{content.concierge.title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Tell us what fascinates you about Mongolia—be it nomadic culture, eagle hunting, or extreme adventure—and our AI will craft a unique journey for you.
+            {content.concierge.description}
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export function Concierge() {
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <Textarea
-                  placeholder="e.g. I love nomadic food, horse riding, and visiting historical sites from the Mongol Empire..."
+                  placeholder={content.concierge.placeholder}
                   value={interests}
                   onChange={(e) => setInterests(e.target.value)}
                   className="min-h-[120px] text-lg bg-background/50"
@@ -56,9 +56,9 @@ export function Concierge() {
                   className="w-full h-12 text-lg bg-primary hover:bg-primary/90"
                 >
                   {loading ? (
-                    <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Crafting Itinerary...</>
+                    <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> {content.concierge.buttonLoading}</>
                   ) : (
-                    <><Sparkles className="mr-2 h-5 w-5" /> Generate My Odyssey</>
+                    <><Sparkles className="mr-2 h-5 w-5" /> {content.concierge.buttonDefault}</>
                   )}
                 </Button>
               </div>
@@ -69,7 +69,7 @@ export function Concierge() {
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
               <Card className="border-primary/20 shadow-lg overflow-hidden">
                 <div className="bg-primary p-6 text-white">
-                  <h3 className="text-2xl font-headline font-bold">Your Personalized Mongolian Odyssey</h3>
+                  <h3 className="text-2xl font-headline font-bold">{content.concierge.resultsHeader}</h3>
                 </div>
                 <CardContent className="p-8 space-y-8">
                   <div className="prose prose-stone max-w-none">
@@ -82,7 +82,7 @@ export function Concierge() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-2 text-primary font-bold">
                         <ListChecks className="h-5 w-5" />
-                        <h4>Key Highlights</h4>
+                        <h4>{content.concierge.highlightsHeader}</h4>
                       </div>
                       <ul className="space-y-2">
                         {itinerary.highlights.map((h, i) => (
@@ -99,7 +99,7 @@ export function Concierge() {
                         <h4>Travel Note</h4>
                       </div>
                       <p className="text-sm text-muted-foreground italic">
-                        This itinerary is powered by advanced AI based on traditional Mongolian hospitality and ecological standards.
+                        {content.concierge.travelNote}
                       </p>
                     </div>
                   </div>

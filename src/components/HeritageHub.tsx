@@ -1,8 +1,14 @@
-
 import Image from "next/image"
 import { Heart, Users, Home, ShieldCheck } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import content from "@/lib/content.json"
+
+const iconMap: Record<string, any> = {
+  "Radical Hospitality": Heart,
+  "The Ger Lifestyle": Home,
+  "Legacy of Empire": Users,
+  "Modern Harmony": ShieldCheck
+}
 
 export function HeritageHub() {
   const landscape = PlaceHolderImages.find(img => img.id === 'nomadic-ger')
@@ -13,49 +19,29 @@ export function HeritageHub() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-6xl font-headline leading-tight">The Soul of the <span className="text-primary">Steppe</span></h2>
+              <h2 className="text-4xl md:text-6xl font-headline leading-tight">
+                {content.heritage.title} <span className="text-primary">{content.heritage.titleAccent}</span>
+              </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Mongolian culture is a tapestry woven from nomadic freedom, hospitality, and a deep respect for the natural world.
+                {content.heritage.description}
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-8">
-              <div className="space-y-3">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <Heart className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold font-headline">Radical Hospitality</h3>
-                <p className="text-muted-foreground">
-                  In the vast steppe, hospitality is enactional, not transactional. Every visitor to a rural ail (encampment) is welcomed as a public norm.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                  <Home className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold font-headline">The Ger Lifestyle</h3>
-                <p className="text-muted-foreground">
-                  About 30% of Mongolians still live in traditional gers (yurts). These portable dwellings offer resilience against extreme climates.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <Users className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold font-headline">Legacy of Empire</h3>
-                <p className="text-muted-foreground">
-                  Founded by Genghis Khan in the 1200s, the Mongol Empire's influence on Eurasian history remains a point of deep pride.
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold font-headline">Modern Harmony</h3>
-                <p className="text-muted-foreground">
-                  Ulaanbaatar blends modern urban life with ancient traditions, creating a unique democratic cultural identity.
-                </p>
-              </div>
+              {content.heritage.cards.map((card, idx) => {
+                const Icon = iconMap[card.title] || ShieldCheck
+                return (
+                  <div key={idx} className="space-y-3">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold font-headline">{card.title}</h3>
+                    <p className="text-muted-foreground">
+                      {card.description}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
@@ -73,8 +59,8 @@ export function HeritageHub() {
               )}
             </div>
             <div className="absolute -bottom-8 -left-8 z-20 bg-white p-8 rounded-xl shadow-xl max-w-xs border border-border">
-              <p className="text-primary font-bold text-4xl font-headline mb-1">30%</p>
-              <p className="text-muted-foreground font-medium">of the population still follow the nomadic way of life on the steppe.</p>
+              <p className="text-primary font-bold text-4xl font-headline mb-1">{content.heritage.stats.value}</p>
+              <p className="text-muted-foreground font-medium">{content.heritage.stats.label}</p>
             </div>
             <div className="absolute -top-12 -right-12 h-64 w-64 bg-primary/5 rounded-full blur-3xl -z-10" />
           </div>

@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Navigation } from "@/components/Navigation"
 import { Concierge } from "@/components/Concierge"
@@ -9,6 +8,7 @@ import { MapExplorer } from "@/components/MapExplorer"
 import { SurvivalGuide } from "@/components/SurvivalGuide"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { ArrowRight, Compass } from "lucide-react"
+import content from "@/lib/content.json"
 
 export default function Home() {
   const hero = PlaceHolderImages.find(img => img.id === 'hero-landscape')
@@ -36,20 +36,20 @@ export default function Home() {
           <div className="relative z-10 max-w-5xl px-4 text-center space-y-8 fade-in-sunrise">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-bold uppercase tracking-widest">
               <Compass className="h-4 w-4 text-primary" />
-              <span>Gateway to the East</span>
+              <span>{content.hero.badge}</span>
             </div>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-headline font-bold leading-tight">
-              Steppe <span className="text-primary italic">Odyssey</span>
+              {content.hero.title} <span className="text-primary italic">{content.hero.titleAccent}</span>
             </h1>
             <p className="text-xl md:text-2xl font-body max-w-3xl mx-auto text-white/90 leading-relaxed">
-              Venture into the land of eternal blue sky. From nomadic heritage to the spirit of the Khan, your Mongolian adventure begins here.
+              {content.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <a href="#itinerary" className="px-10 py-5 bg-primary text-white font-bold rounded-full text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group">
-                Plan Your Journey <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                {content.hero.primaryCta} <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#heritage" className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-full text-lg hover:bg-white/20 transition-all">
-                Explore Culture
+                {content.hero.secondaryCta}
               </a>
             </div>
           </div>
@@ -74,49 +74,40 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Compass className="h-6 w-6 text-primary" />
-                <span className="text-2xl font-headline font-bold text-white tracking-tight">Steppe Odyssey</span>
+                <span className="text-2xl font-headline font-bold text-white tracking-tight">{content.navigation.logo}</span>
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
-                Dedicated to promoting the sustainable tourism and rich cultural heritage of the Mongolian people.
+                {content.footer.description}
               </p>
             </div>
             
-            <div className="space-y-4">
-              <h4 className="font-headline font-bold text-lg">Quick Links</h4>
-              <ul className="space-y-2 text-white/60 text-sm">
-                <li><a href="#itinerary" className="hover:text-primary transition-colors">AI Concierge</a></li>
-                <li><a href="#heritage" className="hover:text-primary transition-colors">Cultural Heritage</a></li>
-                <li><a href="#food" className="hover:text-primary transition-colors">Nomadic Cuisine</a></li>
-                <li><a href="#experience" className="hover:text-primary transition-colors">Berkutchi Experience</a></li>
-              </ul>
-            </div>
+            {content.footer.sections.map((section, idx) => (
+              <div key={idx} className="space-y-4">
+                <h4 className="font-headline font-bold text-lg">{section.title}</h4>
+                <ul className="space-y-2 text-white/60 text-sm">
+                  {section.links.map((link, lIdx) => (
+                    <li key={lIdx}><a href="#" className="hover:text-primary transition-colors">{link}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
             <div className="space-y-4">
-              <h4 className="font-headline font-bold text-lg">Discover</h4>
-              <ul className="space-y-2 text-white/60 text-sm">
-                <li><a href="#" className="hover:text-primary transition-colors">Gobi Desert</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Altai Mountains</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Lake Khuvsgul</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Ulaanbaatar</a></li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-headline font-bold text-lg">Connect</h4>
-              <p className="text-white/60 text-sm">Join our newsletter for exclusive travel tips and nomadic stories.</p>
+              <h4 className="font-headline font-bold text-lg">{content.footer.newsletter.title}</h4>
+              <p className="text-white/60 text-sm">{content.footer.newsletter.description}</p>
               <div className="flex gap-2">
-                <input className="bg-white/10 border-white/20 rounded-lg px-4 py-2 text-sm w-full outline-none focus:ring-1 focus:ring-primary" placeholder="Email" />
-                <button className="bg-primary px-4 py-2 rounded-lg text-sm font-bold">Join</button>
+                <input className="bg-white/10 border-white/20 rounded-lg px-4 py-2 text-sm w-full outline-none focus:ring-1 focus:ring-primary" placeholder={content.footer.newsletter.placeholder} />
+                <button className="bg-primary px-4 py-2 rounded-lg text-sm font-bold">{content.footer.newsletter.button}</button>
               </div>
             </div>
           </div>
           
           <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs">
-            <p>&copy; 2024 Steppe Odyssey. Preserving the Nomadic Soul.</p>
+            <p>{content.footer.copyright}</p>
             <div className="flex gap-8">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+              {content.footer.legal.map((item, idx) => (
+                <a key={idx} href="#" className="hover:text-white transition-colors">{item}</a>
+              ))}
             </div>
           </div>
         </div>
