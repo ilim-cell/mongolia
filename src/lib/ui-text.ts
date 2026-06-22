@@ -23,7 +23,7 @@ export const uiText = {
   "ui.heritage.title": "The Soul of the",
   "ui.heritage.titleAccent": "Steppe",
   "ui.heritage.description": "Mongolian culture is an ancient tapestry woven from nomadic freedom, radical hospitality, and a deep respect for the natural world.",
-  "ui.heritage.stats.value": "30%",
+  "ui.heritage.stats.value": "40%",
   "ui.heritage.stats.label": "percentage of the population adhering to traditional nomadic ways of life.",
   "ui.heritage.card1.title": "Radical Hospitality",
   "ui.heritage.card1.description": "In the vast steppe, hospitality is enactional, not transactional. Every visitor to a rural encampment is welcomed by established public norm.",

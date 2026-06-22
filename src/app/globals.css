@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,10 +33,10 @@
     @apply border-border;
   }
   html {
-    @apply scroll-smooth overflow-x-hidden;
+    @apply scroll-smooth overflow-x-hidden w-full;
   }
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    @apply bg-background text-foreground antialiased overflow-x-hidden w-full;
     font-family: 'Inter', -apple-system, system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -72,4 +73,9 @@
 
 .high-contrast-shadow {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Fix for horizontal scroll issues in flex/grid */
+.flex, .grid {
+  @apply max-w-full;
 }
