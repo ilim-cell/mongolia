@@ -33,7 +33,7 @@ export function Navigation() {
     <>
       {/* Desktop Top Nav */}
       <nav className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-500",
+        "fixed top-0 w-full z-50 transition-all duration-500 hidden md:block",
         isLight
           ? "bg-white/80 backdrop-blur-2xl border-b border-black/5 py-4 shadow-sm" 
           : "bg-transparent border-transparent py-8"
@@ -47,7 +47,7 @@ export function Navigation() {
             <span className="text-xl font-headline font-extrabold tracking-tighter uppercase">{uiText["ui.nav.logo"]}</span>
           </Link>
 
-          <div className="hidden md:flex space-x-12 items-center">
+          <div className="flex space-x-12 items-center">
             {links.map((link) => (
               <Link
                 key={link.href}
