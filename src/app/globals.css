@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --background: 43 33% 94%; /* Slightly darker for better contrast #F2EFE9 */
+    --background: 43 33% 94%;
     --foreground: 20 10% 10%;
     --card: 43 33% 98%;
     --card-foreground: 20 10% 10%;
     --popover: 43 33% 94%;
     --popover-foreground: 20 10% 10%;
-    --primary: 42 70% 35%; /* Darker Ochre for better legibility */
+    --primary: 42 70% 35%;
     --primary-foreground: 43 33% 98%;
-    --secondary: 9 60% 40%; /* Darker Terracotta */
+    --secondary: 9 60% 40%;
     --secondary-foreground: 43 33% 98%;
     --muted: 42 20% 85%;
     --muted-foreground: 20 10% 35%;
@@ -23,7 +23,7 @@
     --border: 42 30% 80%;
     --input: 42 30% 80%;
     --ring: 42 70% 35%;
-    --radius: 0.5rem;
+    --radius: 0.1rem; /* Sharp, professional edges */
   }
 }
 
@@ -33,7 +33,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tight text-slate-900;
@@ -61,4 +61,9 @@
     transform: translateY(0);
     filter: brightness(1);
   }
+}
+
+/* Custom selection color */
+::selection {
+  @apply bg-primary/20 text-slate-900;
 }

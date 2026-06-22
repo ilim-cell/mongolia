@@ -2,21 +2,27 @@
  * @fileOverview Flat configuration for all UI text following an environment-style structure.
  */
 export const uiText = {
+  // NAVIGATION
   "ui.nav.logo": "Steppe Odyssey",
   "ui.nav.links.itinerary": "Itinerary",
   "ui.nav.links.heritage": "Heritage",
   "ui.nav.links.food": "Food",
   "ui.nav.links.experience": "Experience",
   "ui.nav.links.guide": "Guide",
+
+  // HERO SECTION
   "ui.hero.badge": "Gateway to the East",
-  "ui.hero.title": "Visit",
+  "ui.hero.title": "Discover",
   "ui.hero.titleAccent": "Mongolia",
   "ui.hero.subtitle": "Venture into the land of eternal blue sky. From nomadic heritage to the spirit of the Khan, explore the heart of Central Asia.",
+  "ui.hero.scroll": "Scroll to Explore",
+
+  // HERITAGE SECTION
   "ui.heritage.title": "The Soul of the",
   "ui.heritage.titleAccent": "Steppe",
   "ui.heritage.description": "Mongolian culture is a tapestry woven from nomadic freedom, hospitality, and a deep respect for the natural world.",
   "ui.heritage.stats.value": "30%",
-  "ui.heritage.stats.label": "of the population still live in traditional ways of life.",
+  "ui.heritage.stats.label": "of the population still live in traditional nomadic encampments.",
   "ui.heritage.card1.title": "Radical Hospitality",
   "ui.heritage.card1.description": "In the vast steppe, hospitality is enactional, not transactional. Every visitor to a rural ail (encampment) is welcomed as a public norm.",
   "ui.heritage.card2.title": "The Ger Lifestyle",
@@ -25,17 +31,21 @@ export const uiText = {
   "ui.heritage.card3.description": "Founded by Genghis Khan in the 1200s, the Mongol Empire's influence on Eurasian history remains a point of deep pride.",
   "ui.heritage.card4.title": "Modern Harmony",
   "ui.heritage.card4.description": "Ulaanbaatar blends modern urban life with ancient traditions, creating a unique democratic cultural identity.",
+
+  // MAP EXPLORER
   "ui.mapExplorer.title": "Steppe Landmarks",
-  "ui.mapExplorer.description": "From the frozen valleys to the modern sprawl.",
+  "ui.mapExplorer.description": "From the frozen valleys to the modern sprawl of the capital.",
   "ui.mapExplorer.landmark1.title": "Yolyn Am (Valley of Vultures)",
   "ui.mapExplorer.landmark1.description": "A narrow canyon in the Gobi where ice sheets stay frozen deep into summer. Steep cliffs block sunlight, creating a hidden pocket of cold amidst the desert heat.",
   "ui.mapExplorer.landmark1.badge1": "Permanent Ice",
   "ui.mapExplorer.landmark1.badge2": "Gobi Gurvansaikhan",
   "ui.mapExplorer.landmark2.title": "Ulaanbaatar",
-  "ui.mapExplorer.landmark2.description": "The world's coldest capital city. fusing Soviet-era architecture, modern glass towers, and sprawling ger districts.",
+  "ui.mapExplorer.landmark2.description": "The world's coldest capital city, fusing Soviet-era architecture, modern glass towers, and sprawling ger districts.",
   "ui.mapExplorer.landmark2.badge1": "Urban Hub",
   "ui.mapExplorer.landmark2.badge2": "Central Region",
-  "ui.concierge.badge": "DISCOVERY TOOL",
+
+  // CONCIERGE (AI)
+  "ui.concierge.badge": "Heritage Discovery",
   "ui.concierge.title": "Traveler's Curiosity",
   "ui.concierge.description": "Describe your interests to reveal a tailored perspective on Mongolia's heritage and landscapes.",
   "ui.concierge.placeholder": "I am interested in the history of the Silk Road and nomadic music...",
@@ -44,6 +54,8 @@ export const uiText = {
   "ui.concierge.resultsHeader": "Tailored Exploration Guide",
   "ui.concierge.highlightsHeader": "Key Experiences",
   "ui.concierge.travelNote": "This information is provided for educational and cultural discovery purposes.",
+
+  // FOOD MENU
   "ui.food.title": "Taste of the Steppe",
   "ui.food.description": "\"Meat for the winter, dairy for the summer.\" Discover a culinary tradition built on nourishment and resilience.",
   "ui.food.item1.name": "Buuz",
@@ -57,6 +69,8 @@ export const uiText = {
   "ui.food.featured.badge": "Signature Dish",
   "ui.food.featured.title": "Handmade Buuz",
   "ui.food.featured.description": "Traditionally prepared with high-fat mutton to sustain during cold winters.",
+
+  // BERKUTCHI
   "ui.berkutchi.badge": "Altai Mountains",
   "ui.berkutchi.title": "The Berkutchi Legend",
   "ui.berkutchi.description": "In the snow-capped Altai, eagle hunting is not just a sport—it's a spiritual bond between man and bird, surviving for millennia.",
@@ -64,6 +78,8 @@ export const uiText = {
   "ui.berkutchi.card1.description": "Eagles are considered revered family members, released back into the wild after years of loyal service.",
   "ui.berkutchi.card2.title": "Winter Survival",
   "ui.berkutchi.card2.description": "Hunting takes place in the harshest winter months, scanning the white horizon for prey with lethal precision.",
+
+  // SURVIVAL GUIDE
   "ui.survival.title": "Survival & Logistics",
   "ui.survival.description": "Expert advice for navigating the extreme Mongolian wilderness.",
   "ui.survival.guide1.title": "Climate Control",
@@ -74,6 +90,8 @@ export const uiText = {
   "ui.survival.guide3.description": "Learn the rituals of the ger: enter with your right foot first, and never step on the threshold.",
   "ui.survival.guide4.title": "Navigation",
   "ui.survival.guide4.description": "Off-roading is the norm. Ask local drivers and download offline maps for the vast, roadless grasslands.",
+
+  // FOOTER
   "ui.footer.description": "Dedicated to documenting and sharing the sustainable tourism and rich cultural heritage of the Mongolian people.",
-  "ui.footer.copyright": "© 2026 Saxler-Lim Heritage - Informational Resource"
+  "ui.footer.copyright": "© 2026 Saxler-Lim Heritage - Educational Resource"
 };
