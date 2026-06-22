@@ -3,7 +3,7 @@
  */
 export const uiText = {
   // NAVIGATION
-  "ui.nav.logo": "Steppe Odyssey",
+  "ui.nav.logo": "Explore Mongolia",
   "ui.nav.links.itinerary": "Itinerary",
   "ui.nav.links.heritage": "Heritage",
   "ui.nav.links.food": "Food",
@@ -49,11 +49,11 @@ export const uiText = {
   "ui.concierge.title": "Traveler's Curiosity",
   "ui.concierge.description": "Describe your areas of interest to reveal a tailored perspective on Mongolia's heritage and landscapes.",
   "ui.concierge.placeholder": "Example: I am interested in nomadic music and the history of the Silk Road...",
-  "ui.concierge.buttonDefault": "Process Inquiry",
-  "ui.concierge.buttonLoading": "Analyzing...",
+  "ui.concierge.buttonDefault": "Start",
+  "ui.concierge.buttonLoading": "Loading...",
   "ui.concierge.resultsHeader": "Tailored Exploration Guide",
   "ui.concierge.highlightsHeader": "Key Experiences",
-  "ui.concierge.travelNote": "This data is provided for educational and cultural discovery purposes.",
+  "ui.concierge.travelNote": "This data is provided for educational and cultural discovery purposes. Do not rely on this information solely.",
 
   // FOOD MENU
   "ui.food.title": "Taste of the Steppe",
@@ -93,5 +93,5 @@ export const uiText = {
 
   // FOOTER
   "ui.footer.description": "Dedicated to the documentation and sharing of the rich cultural heritage and sustainable discovery of the Mongolian people.",
-  "ui.footer.copyright": "© 2026 Steppe Odyssey Heritage - Educational Resource"
+  "ui.footer.copyright": "© 2026 Saxler-Lim Travel"
 };

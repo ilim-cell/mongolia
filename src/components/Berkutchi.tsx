@@ -1,6 +1,7 @@
+
 import Image from "next/image"
 import { Bird, ShieldCheck, Mountain } from "lucide-react"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { Images } from "@/lib/placeholder-images"
 import { uiText } from "@/lib/ui-text"
 
 const iconMap: Record<string, any> = {
@@ -9,56 +10,55 @@ const iconMap: Record<string, any> = {
 }
 
 export function Berkutchi() {
-  const eagleImg = PlaceHolderImages.find(img => img.id === 'eagle-hunter')
-
   const cards = [
     { title: uiText["ui.berkutchi.card1.title"], description: uiText["ui.berkutchi.card1.description"] },
     { title: uiText["ui.berkutchi.card2.title"], description: uiText["ui.berkutchi.card2.description"] },
   ]
 
   return (
-    <section id="experience" className="py-32 bg-foreground text-white">
+    <section id="experience" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-20">
-          <div className="w-full lg:w-1/2 space-y-12">
+        <div className="grid lg:grid-cols-12 gap-20 items-stretch">
+          <div className="lg:col-span-7 relative min-h-[500px] rounded-3xl overflow-hidden high-contrast-shadow">
+            <Image
+              src={Images.experience.url}
+              alt="Eagle Hunting"
+              fill
+              unoptimized
+              className="object-cover"
+              data-ai-hint={Images.experience.hint}
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-12">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-4 text-primary font-bold tracking-[0.4em] uppercase text-[9px]">
+              <div className="inline-flex items-center gap-4 text-muted-foreground font-bold tracking-[0.4em] uppercase text-[9px]">
                 <Bird className="h-4 w-4" />
                 {uiText["ui.berkutchi.badge"]}
               </div>
-              <h2 className="text-5xl md:text-6xl font-headline leading-tight">{uiText["ui.berkutchi.title"]}</h2>
-              <p className="text-white/40 text-lg leading-relaxed font-light">
+              <h2 className="text-5xl md:text-6xl font-headline tracking-tighter leading-tight">{uiText["ui.berkutchi.title"]}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed font-light">
                 {uiText["ui.berkutchi.description"]}
               </p>
             </div>
 
-            <div className="grid gap-12">
+            <div className="space-y-8">
               {cards.map((card, idx) => {
                 const Icon = iconMap[card.title] || ShieldCheck
                 return (
-                  <div key={idx} className="flex gap-6 items-start max-w-md">
-                    <div className="shrink-0 h-px w-12 bg-primary mt-3" />
-                    <div className="space-y-3">
-                      <h4 className="font-bold uppercase tracking-widest text-[11px] text-white">{card.title}</h4>
-                      <p className="text-white/30 text-sm leading-relaxed font-light">{card.description}</p>
+                  <div key={idx} className="flex gap-6 items-start max-w-md p-6 border border-border rounded-2xl hover:bg-secondary transition-colors">
+                    <div className="h-10 w-10 flex items-center justify-center bg-foreground text-white rounded-xl shrink-0">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="font-bold uppercase tracking-widest text-[11px]">{card.title}</h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed font-light">{card.description}</p>
                     </div>
                   </div>
                 )
               })}
             </div>
-          </div>
-
-          <div className="w-full lg:w-1/2 relative min-h-[500px] border-[20px] border-white/5">
-            {eagleImg && (
-              <Image
-                src={eagleImg.imageUrl}
-                alt={eagleImg.description}
-                fill
-                unoptimized
-                className="object-cover opacity-80"
-                data-ai-hint={eagleImg.imageHint}
-              />
-            )}
           </div>
         </div>
       </div>
