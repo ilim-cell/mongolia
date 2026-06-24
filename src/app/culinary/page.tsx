@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation"
 import { FoodMenu } from "@/components/FoodMenu"
 import { Compass } from "lucide-react"

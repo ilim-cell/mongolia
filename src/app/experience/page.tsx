@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation"
 import { Berkutchi } from "@/components/Berkutchi"
 import { Compass } from "lucide-react"

@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation"
 import { SurvivalGuide } from "@/components/SurvivalGuide"
 import { Compass } from "lucide-react"

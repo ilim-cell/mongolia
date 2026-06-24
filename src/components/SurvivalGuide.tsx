@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Images } from "@/lib/placeholder-images"
 import { uiText } from "@/lib/ui-text"
@@ -33,7 +32,7 @@ export function SurvivalGuide() {
           {guides.map((guide, i) => {
             const icon = iconMap[guide.title] || "map"
             return (
-              <div key={i} className="p-10 border border-black/5 hover:bg-black hover:text-white transition-all duration-500 group bg-slate-50">
+              <div key={i} className="p-10 border border-black/5 hover:bg-black hover:text-white duration-500 group bg-slate-50 transition-all">
                 <div className="h-16 w-16 flex items-center justify-center mb-10 bg-black text-white rounded-none group-hover:bg-white group-hover:text-black transition-all">
                   <span className="material-symbols-rounded text-3xl">{icon}</span>
                 </div>

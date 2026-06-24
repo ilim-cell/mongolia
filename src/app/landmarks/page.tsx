@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation"
 import { MapExplorer } from "@/components/MapExplorer"
 import { Compass } from "lucide-react"

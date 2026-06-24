@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { Navigation } from "@/components/Navigation"
 import { Images } from "@/lib/placeholder-images"

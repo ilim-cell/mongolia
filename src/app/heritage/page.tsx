@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation"
 import { HeritageHub } from "@/components/HeritageHub"
 import { Compass } from "lucide-react"
