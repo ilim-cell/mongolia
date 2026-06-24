@@ -4,6 +4,7 @@ import { Images } from "@/lib/placeholder-images"
 import { Compass, ArrowRight } from "lucide-react"
 import { uiText } from "@/lib/ui-text"
 import Link from "next/link"
+import { Concierge } from "@/components/Concierge"
 
 export default function Home() {
   return (
@@ -58,6 +59,10 @@ export default function Home() {
                {uiText["ui.hero.scroll"]}
              </span>
           </div>
+        </section>
+
+        <section id="itinerary" className="bg-white">
+          <Concierge />
         </section>
       </main>
 
