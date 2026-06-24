@@ -9,7 +9,7 @@ export const Images = {
   },
   heritage: {
     url: imageLinks.heritage,
-    detailed: imageLinks.heritage_nomadic_life_ger,
+    detailed: imageLinks.heritage,
     hint: "mongolian nomadic culture ger yurt"
   },
   landmarks: {
@@ -38,10 +38,10 @@ export const Images = {
     city: imageLinks.gallery_ulaanbaatar_modern_skyline
   },
   extra: {
-    map: imageLinks.map_topographic_central,
-    prep: imageLinks.culinary_prep_detail,
-    peaks: imageLinks.altai_winter_peaks,
-    kit: imageLinks.survival_first_aid_kit,
-    tea: imageLinks.hospitality_ritual_tea
+    map: imageLinks.landmarks,
+    prep: imageLinks.food_traditional_buuz_steamed,
+    peaks: imageLinks.experience_eagle_hunter_mountain,
+    kit: imageLinks.survival_wilderness_gear_pack,
+    tea: imageLinks.heritage
   }
 };

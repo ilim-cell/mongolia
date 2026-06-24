@@ -21,7 +21,7 @@
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
+    --border: 0 0% 10%;
     --input: 0 0% 90%;
     --ring: 0 0% 0%;
     --radius: 0rem;
@@ -36,7 +36,7 @@
     @apply scroll-smooth overflow-x-hidden w-full;
   }
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden w-full;
+    @apply bg-background text-foreground antialiased overflow-x-hidden w-full selection:bg-black selection:text-white;
     font-family: 'Inter', -apple-system, system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -45,11 +45,11 @@
 }
 
 .glass {
-  @apply bg-white/80 backdrop-blur-xl border border-black/10;
+  @apply bg-white/90 backdrop-blur-xl border border-black/20;
 }
 
 .glass-dark {
-  @apply bg-black/90 backdrop-blur-xl border border-white/10;
+  @apply bg-black/95 backdrop-blur-xl border border-white/20;
 }
 
 .material-symbols-rounded {
@@ -68,14 +68,13 @@
 }
 
 .section-padding {
-  @apply py-20 md:py-32;
+  @apply py-24 md:py-32;
 }
 
 .high-contrast-shadow {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
 }
 
-/* Fix for horizontal scroll issues in flex/grid */
 .flex, .grid {
   @apply max-w-full;
 }
