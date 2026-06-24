@@ -2,10 +2,12 @@ import imagesData from './images.json';
 
 /**
  * A utility to safely retrieve images from the central registry.
- * Prevents empty string errors by returning a null or fallback.
+ * Prevents empty string errors by returning a fallback.
  */
 const safeImage = (url: string | undefined): string => {
-  if (!url || url.trim() === "") return "https://picsum.photos/seed/fallback/1200/800";
+  if (!url || typeof url !== 'string' || url.trim() === "") {
+    return "https://picsum.photos/seed/fallback/1200/800";
+  }
   return url;
 };
 

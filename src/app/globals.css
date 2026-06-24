@@ -20,7 +20,7 @@
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 10%;
+    --border: 0 0% 0%;
     --input: 0 0% 90%;
     --ring: 0 0% 0%;
     --radius: 0rem;
@@ -32,10 +32,10 @@
     @apply border-black/10;
   }
   html {
-    @apply scroll-smooth overflow-x-hidden w-full;
+    @apply scroll-smooth overflow-x-hidden w-full selection:bg-black selection:text-white;
   }
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden w-full selection:bg-black selection:text-white;
+    @apply bg-background text-foreground antialiased overflow-x-hidden w-full;
     font-family: 'Inter', -apple-system, system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -44,11 +44,11 @@
 }
 
 .glass {
-  @apply bg-white/80 backdrop-blur-2xl border border-black/10 shadow-sm;
+  @apply bg-white/70 backdrop-blur-xl border border-black/5 shadow-sm;
 }
 
 .glass-dark {
-  @apply bg-black/90 backdrop-blur-2xl border border-white/20 shadow-2xl;
+  @apply bg-black/90 backdrop-blur-2xl border border-white/10 shadow-2xl;
 }
 
 .material-symbols-rounded {
@@ -71,7 +71,7 @@
 }
 
 .high-contrast-shadow {
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 .no-scrollbar::-webkit-scrollbar {
