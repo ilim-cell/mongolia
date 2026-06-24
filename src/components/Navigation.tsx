@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -20,7 +19,7 @@ export function Navigation() {
   }, [])
 
   const links = [
-    { name: uiText["ui.nav.links.home"] || "Home", href: "/", icon: "home" },
+    { name: uiText["ui.nav.links.home"], href: "/", icon: "home" },
     { name: uiText["ui.nav.links.heritage"], href: "/heritage", icon: "museum" },
     { name: uiText["ui.nav.links.food"], href: "/culinary", icon: "restaurant" },
     { name: uiText["ui.nav.links.experience"], href: "/experience", icon: "flight" },
@@ -35,12 +34,12 @@ export function Navigation() {
       <nav className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 hidden md:block",
         isLightMode
-          ? "bg-white/95 backdrop-blur-md border-b border-black/20 py-5" 
+          ? "bg-white/95 backdrop-blur-md border-b border-black/10 py-5" 
           : "bg-transparent py-10"
       )}>
         <div className="max-w-7xl mx-auto px-10 flex justify-between items-center">
           <Link href="/" className={cn(
-            "flex items-center gap-3 group",
+            "flex items-center gap-3 group transition-colors",
             isLightMode ? "text-black" : "text-white"
           )}>
             <span className="material-symbols-rounded text-3xl group-hover:rotate-12 transition-transform">explore</span>
@@ -67,22 +66,22 @@ export function Navigation() {
       </nav>
 
       {/* Mobile Bottom Dock (Floating Pill) */}
-      <nav className="fixed bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-[380px] z-50 md:hidden">
-        <div className="glass-dark rounded-full p-3 flex justify-around items-center px-8 shadow-2xl border border-white/30">
+      <nav className="fixed bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-[420px] z-50 md:hidden animate-in fade-in slide-in-from-bottom-10 duration-700">
+        <div className="glass-dark rounded-full p-2 flex justify-around items-center px-6 border border-white/20 high-contrast-shadow">
           {links.map((link) => {
             const isActive = pathname === link.href
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative flex flex-col items-center justify-center w-14 h-14"
+                className="relative flex flex-col items-center justify-center w-14 h-14 transition-all"
               >
                 <span className={cn(
-                  "material-symbols-rounded text-3xl transition-all duration-300",
-                  isActive ? "text-white scale-125" : "text-white/30"
+                  "material-symbols-rounded text-2xl transition-all duration-300",
+                  isActive ? "text-white scale-125 font-bold" : "text-white/30"
                 )}>{link.icon}</span>
                 {isActive && (
-                  <span className="absolute -bottom-1 h-1.5 w-1.5 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                  <span className="absolute -bottom-1 h-1 w-1 bg-white rounded-full shadow-[0_0_12px_rgba(255,255,255,1)]" />
                 )}
               </Link>
             )

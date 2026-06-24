@@ -1,47 +1,55 @@
+import imagesData from './images.json';
 
-import imageLinks from './images.json';
+/**
+ * A utility to safely retrieve images from the central registry.
+ * Prevents empty string errors by returning a null or fallback.
+ */
+const safeImage = (url: string | undefined): string => {
+  if (!url || url.trim() === "") return "https://picsum.photos/seed/fallback/1200/800";
+  return url;
+};
 
 export const Images = {
   hero: {
-    url: imageLinks.hero,
-    detailed: imageLinks.hero_primary_landscape,
+    url: safeImage(imagesData.hero),
+    detailed: safeImage(imagesData.hero_primary_landscape),
     hint: "mongolia landscape steppe horizon"
   },
   heritage: {
-    url: imageLinks.heritage,
-    detailed: imageLinks.heritage,
+    url: safeImage(imagesData.heritage),
+    detailed: safeImage(imagesData.heritage),
     hint: "mongolian nomadic culture ger yurt"
   },
   landmarks: {
-    url: imageLinks.landmarks,
-    detailed: imageLinks.landmarks_vulture_valley_ice,
+    url: safeImage(imagesData.landmarks),
+    detailed: safeImage(imagesData.landmarks_vulture_valley_ice),
     hint: "mongolia nature canyon mountains"
   },
   food: {
-    url: imageLinks.food,
-    detailed: imageLinks.food_traditional_buuz_steamed,
+    url: safeImage(imagesData.food),
+    detailed: safeImage(imagesData.food_traditional_buuz_steamed),
     hint: "mongolian cuisine traditional meat"
   },
   experience: {
-    url: imageLinks.experience,
-    detailed: imageLinks.experience_eagle_hunter_mountain,
+    url: safeImage(imagesData.experience),
+    detailed: safeImage(imagesData.experience_eagle_hunter_mountain),
     hint: "mongolian eagle hunter mountains snow"
   },
   survival: {
-    url: imageLinks.survival,
-    detailed: imageLinks.survival_wilderness_gear_pack,
+    url: safeImage(imagesData.survival),
+    detailed: safeImage(imagesData.survival_wilderness_gear_pack),
     hint: "mongolia wilderness survival gear"
   },
   gallery: {
-    sunset: imageLinks.gallery_steppes_sunset,
-    horse: imageLinks.gallery_horse_riding_culture,
-    city: imageLinks.gallery_ulaanbaatar_modern_skyline
+    sunset: safeImage(imagesData.gallery_steppes_sunset),
+    horse: safeImage(imagesData.gallery_horse_riding_culture),
+    city: safeImage(imagesData.gallery_ulaanbaatar_modern_skyline)
   },
   extra: {
-    map: imageLinks.landmarks,
-    prep: imageLinks.food_traditional_buuz_steamed,
-    peaks: imageLinks.experience_eagle_hunter_mountain,
-    kit: imageLinks.survival_wilderness_gear_pack,
-    tea: imageLinks.heritage
+    map: safeImage(imagesData.landmarks),
+    prep: safeImage(imagesData.food_traditional_buuz_steamed),
+    peaks: safeImage(imagesData.experience_eagle_hunter_mountain),
+    kit: safeImage(imagesData.survival_wilderness_gear_pack),
+    tea: safeImage(imagesData.heritage)
   }
 };
